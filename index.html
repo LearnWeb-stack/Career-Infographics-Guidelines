@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Infographics Creation Checklist</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background: white;
+            color: #333;
+            overflow-x: auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #2c5aa0;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #2c5aa0;
+            font-size: 28px;
+            margin: 0;
+            font-weight: bold;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0 0 0;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            break-inside: avoid;
+        }
+        
+        .section h2 {
+            background: linear-gradient(135deg, #2c5aa0, #3d6bb3);
+            color: white;
+            padding: 12px 15px;
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section h2::before {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .checklist li {
+            margin: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        
+        .checklist li:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #2c5aa0;
+            border-radius: 3px;
+            margin-right: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .checkbox:hover {
+            background-color: #e8f0fe;
+        }
+        
+        .checkbox.checked {
+            background-color: #2c5aa0;
+        }
+        
+        .checkbox.checked::after {
+            content: "✓";
+            color: white;
+            position: absolute;
+            top: -2px;
+            left: 2px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .item-text {
+            flex: 1;
+            font-size: 14px;
+        }
+        
+        .item-text strong {
+            color: #2c5aa0;
+            font-weight: 600;
+        }
+        
+        .tips-section {
+            background: #f8f9ff;
+            border-left: 4px solid #2c5aa0;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .tips-section h3 {
+            color: #2c5aa0;
+            margin: 0 0 15px 0;
+            font-size: 16px;
+        }
+        
+        .key-elements {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .key-elements div {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 13px;
+        }
+        
+        .key-elements strong {
+            color: #2c5aa0;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .print-button {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .print-button:hover {
+            background: #234a87;
+        }
+        
+        @media (max-width: 600px) {
+            .key-elements {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 Essential Infographics Creation Checklist</h1>
+        <p>A streamlined guide for high school students</p>
+    </div>
+
+    <button class="print-button no-print" onclick="window.print()">🖨️ Print or Save as PDF</button>
+
+    <div class="section">
+        <h2>📋 Before You Start</h2>
+        <ul class="checklist">
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Define your main message</strong> - What's the ONE key takeaway?</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Know your audience</strong> - Who will see this infographic?</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Gather all content</strong> - Stats, facts, quotes from the articles</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Sketch a rough layout</strong> - Hand-drawn wireframe</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🎨 Design Basics</h2>
+        <ul class="checklist">
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Choose 3-5 colors max</strong> - Use color psychology (blue = trust, green = growth)</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Pick 2-3 fonts</strong> - One bold header, one readable body text</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Create visual hierarchy</strong> - Biggest = main title, smallest = details</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Use consistent icon style</strong> - All outlined OR all filled, same size throughout</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📊 Content Organization</h2>
+        <ul class="checklist">
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Follow reading flow</strong> - Top to bottom, left to right</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>5-second rule</strong> - Main message clear immediately</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Break up text</strong> - No paragraphs longer than 3 lines</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Include data sources</strong> - Small attribution at bottom</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🔧 Technical Setup</h2>
+        <ul class="checklist">
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Choose your tool</strong> - Canva (beginner), Figma (intermediate)</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Set dimensions</strong> - 1080x1080px (Instagram) or 8.5x11" (print)</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Save multiple formats</strong> - Working file + PNG/PDF for sharing</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>✅ Final Check</h2>
+        <ul class="checklist">
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Proofread everything</strong> - Spelling, grammar, numbers</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Test readability</strong> - View at actual size, ask someone to review</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Optimize file size</strong> - Compress without losing quality</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Make it shareable</strong> - Right size for intended platform</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tips-section">
+        <h3>💡 Success Tips</h3>
+        <ul class="checklist">
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Start simple</strong> - Better to do fewer things well</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Use white space</strong> - Don't fill every inch</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Stay consistent</strong> - Same spacing and alignment throughout</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Test on mobile</strong> - Make sure it's readable on phones</div>
+            </li>
+        </ul>
+
+        <h3>🎯 Focus on These 4 Key Elements from Your Articles:</h3>
+        <div class="key-elements">
+            <div>
+                <strong>Article 1 - Front-End:</strong>
+                Vocabulary (HTML, CSS, JavaScript), 16% job growth, responsive design process, AI integration skills
+            </div>
+            <div>
+                <strong>Article 2 - Back-End:</strong>
+                Server-side languages (Python, Java), APIs & databases, 16-20% growth, cloud platforms (AWS, Azure)
+            </div>
+            <div>
+                <strong>Article 3 - UI/UX:</strong>
+                Design Thinking process (5 steps), 13-18% growth, accessibility focus, AI tool integration
+            </div>
+            <div>
+                <strong>Article 4 - DevOps/QA:</strong>
+                CI/CD pipelines, testing methods, 15-21% growth, AI model testing skills
+            </div>
+        </div>
+
+        <h3>📊 Basic Rubric - Information Accuracy Check:</h3>
+        <ul class="checklist">
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Job growth statistics correct</strong> - Front-End & Back-End: 16%, UI/UX: 13-18%, DevOps/QA: 15-21%</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Key technologies accurate</strong> - HTML/CSS/JS, Python/Java/Node.js, Figma/Sketch, CI/CD</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Role definitions clear</strong> - What each tech role actually does day-to-day</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>AI integration mentioned</strong> - How AI impacts each role and future skills needed</div>
+            </li>
+            <li>
+                <div class="checkbox" onclick="toggleCheck(this)"></div>
+                <div class="item-text"><strong>Industry examples included</strong> - Healthcare, fintech, e-commerce, AI startups</div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleCheck(checkbox) {
+            checkbox.classList.toggle('checked');
+        }
+    </script>
+</body>
+</html>
